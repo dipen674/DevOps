@@ -8,6 +8,10 @@ config.vm.provision "shell", inline: "echo running provision script"
 
    web.vm.network "private_network", ip: "192.168.56.201"
 
+   #assign you local host ip
+   web.vm.network "private_network", ip: "192.168.56.201"
+
+
    web.vm.network "public_network", bridge: "Killer(TM) Wi-Fi 7 BE1750x 320MHz Wireless Network Adapter (BE200NGW)"
 
    #can change bride based on the network adapter of your PC
@@ -37,8 +41,8 @@ config.vm.provision "shell", inline: "echo running provision script"
         php-zip
       
       sudo mkdir -p /srv/www
-      sudo chown www-data:www-data /srv/www
-      curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
+      sudo chown -R www-data:www-data /srv/www
+      sudo curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
 
       sudo tee /etc/apache2/sites-available/wordpress.conf <<EOF
         <VirtualHost *:80>
@@ -57,13 +61,18 @@ config.vm.provision "shell", inline: "echo running provision script"
 EOF
 
       sudo a2ensite wordpress.conf
+      sudo systemctl reload apache2
       sudo a2enmod rewrite
+      sudo systemctl restart apache2
+
       sudo a2dissite 000-default
+
+      sudo systemctl restart apache2
 
       sudo -u www-data cp /srv/www/wordpress/wp-config-sample.php /srv/www/wordpress/wp-config.php
 
       sudo -u www-data sed -i 's/database_name_here/devopsdb/' /srv/www/wordpress/wp-config.php
-      sudo -u www-data sed -i 's/username_here/dbuser/' /srv/www/wordpress/wp-config.php
+      sudo -u www-data sed -i 's/username_here/mydbuser/' /srv/www/wordpress/wp-config.php
       sudo -u www-data sed -i 's/password_here/Demo@123/' /srv/www/wordpress/wp-config.php
       sudo -u www-data sed -i 's/localhost/192.168.56.202/'  /srv/www/wordpress/wp-config.php
 
@@ -93,7 +102,7 @@ end
      sudo mysql -e "Grant all privileges on devopsdb.* to 'mydbuser'@'192.168.56.201';"
      sudo mysql -e "Flush privileges;"
         
-    sudo sed -i "s/127.0.0.1/192.168.56.201/g" /etc/mysql/mysql.conf.d/mysqld.cnf
+    sudo sed -i "s/127.0.0.1/192.168.56.202/g" /etc/mysql/mysql.conf.d/mysqld.cnf
     
     sudo systemctl restart mysql
   SHELL

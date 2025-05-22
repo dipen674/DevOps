@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Binod Bhatta/Vagrant_setups/wordpressdep","disabled":false,"__vagrantfile":true}}}
+=======
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Binod Bhatta/Vagrant_setups/vagrantfiles/wordpressdep","disabled":false,"__vagrantfile":true}}}
+>>>>>>> develop
