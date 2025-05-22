@@ -6,8 +6,6 @@ config.vm.provision "shell", inline: "echo running provision script"
    web.vm.box = "bento/ubuntu-24.04"
    web.vm.box_version = "202502.21.0"
 
-   web.vm.network "private_network", ip: "192.168.56.201"
-
    #assign you local host ip
    web.vm.network "private_network", ip: "192.168.56.201"
 
