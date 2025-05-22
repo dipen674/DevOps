@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
 
    config.vm.network "public_network", bridge: "Killer(TM) Wi-Fi 7 BE1750x 320MHz Wireless Network Adapter (BE200NGW)"
 
-   config.vm.synced_folder "../docker_VM", "/vagrant_data"
+  #  config.vm.synced_folder "../docker_VM", "/vagrant_data"
 
    config.vm.provider "virtualbox" do |vb|
   #   vb.gui = true
