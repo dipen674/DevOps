@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Design</title>
+</head>
+
+<div style="max-width:600px; margin:auto;">
+
+    <body style="background-color: azure;">
+        <h2 align="center" style="color: rgb(7, 113, 162);"> Student Registration Form</h2>
+
+        <form action="">
+            <div>
+                <label for="name">Username</label> <br>
+                <input type="text" name="name" id="name" required placeholder="First name">(Maximum 30 characters
+                a-z,A-Z)
+                <br>
+                <input type="text" name="name" required placeholder="Last name">(Maximum 30 characters a-z,A-Z)
+            </div>
+            <hr>
+            <div>
+                <label for="age">Age</label><br>
+                <input type="number" name="age" id="age">
+            </div>
+            <hr>
+            <div>
+                <label for="DOB">Date of birth</label><br>
+                <input type="date" name="Date of Birth" id="DOB">
+            </div>
+            <hr>
+            <div>
+                <label for="Email">Email ID</label><br>
+                <input type="email" name="Email ID" id="Email">
+            </div>
+            <hr>
+            <div>
+                <label for="Mob Num">Mobile Number</label><br>
+                <input type="tel" name="Mobile Number" id="Mob Num">
+            </div>
+            <hr>
+            <div>
+                <label for="Gender">Gender</label> <br>
+                <input type="radio" name="Gender" id="Gender">Male
+                <input type="radio" name="Gender" id="Gender">Female <br>
+
+            </div>
+            <hr>
+            <div>
+                <label for="address">Address</label><br>
+                <textarea name="" id="address" rows="3" cols="20"></textarea>
+            </div>
+            <hr>
+            <div>
+                <label for="City">City</label><br>
+                <input type="text" name="city" id="City">
+            </div>
+            <hr>
+            <div>
+                <label for="Pin Code">Pin Code</label> (6 digit number)<br>
+                <input type="text" name="Pin Code" id="pin Code">
+            </div>
+            <hr>
+            <div>
+                <label for="Country">Country</label><br>
+                <select name="country" id="country">
+                    <option value="nepal">Nepal</option>
+                    <option value="india">India</option>
+                    <option value="china">China</option>
+                    <option value="japan">Japan</option>
+                    <option value="south-korea">South Korea</option>
+                    <option value="indonesia">Indonesia</option>
+                    <option value="thailand">Thailand</option>
+                    <option value="philippines">Philippines</option>
+                    <option value="vietnam">Vietnam</option>
+                    <option value="bhutan">Bhutan</option>
+                </select>
+            </div>
+            <hr>
+            <div>
+                <label for="Hobbies">Hobbies</label><br>
+                <input type="radio" name="Hobbies" id="Hobbies">Singing
+                <input type="radio" name="Hobbies" id="Hobbies">Drawing
+                <input type="radio" name="Hobbies" id="Hobbies">Dancing
+                <input type="radio" name="Hobbies" id="Hobbies">Sketching
+                Others<input type="text" name="Hobbies" id="Hobbies">
+            </div>
+            <hr>
+            <div>
+                <label for="qual"><strong>Qualification:</strong></label>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of passing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Class X</td>
+                            <td> <input type="text"> </td>
+                            <td><input type="text"></td>
+                            <td> <input type="text"> </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Class XII</td>
+                            <td> <input type="text"> </td>
+                            <td><input type="text"></td>
+                            <td> <input type="text"> </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Bachelors</td>
+                            <td> <input type="text"> </td>
+                            <td><input type="text"></td>
+                            <td> <input type="text"> </td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Masters</td>
+                            <td> <input type="text"> </td>
+                            <td><input type="text"></td>
+                            <td> <input type="text"> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            <div>
+                <label for="Applied">Courses Applied For:</label>
+                <input type="radio" name="Courses Applied" id="Applied">BBA
+                <input type="radio" name="Courses Applied" id="Applied">BSCIT
+                <input type="radio" name="Courses Applied" id="Applied">BSCIT(CE)
+                <input type="radio" name="Courses Applied" id="Applied">BBM
+
+            </div>
+            <hr>
+            <div>
+                <br>
+                <input type="button" name="save" id="save" value="SAVE">
+                <input type="button" value="ALERT" onclick="alert('This form is designed to collect student details')">
+                <input type="submit" name="submit" id="submit" value="SUBMIT">
+                <input type="reset" name="reset" id="reset" value="RESET">
+            </div>
+        </form>
+    </body>
+</div>
+
+</html>
