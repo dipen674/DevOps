@@ -1,0 +1,549 @@
+/* General body styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    transition: background-color 0.3s;
+    overflow-x: hidden;
+  
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
+  
+  /* Header styles */
+  
+  header {
+    background: #1a5f7a;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+  }
+  
+  .heading1 {
+    margin-left: 1px;
+  }
+  
+  h1 {
+    margin: -40px;
+  }
+  
+  
+  h2 {
+    margin: 10px 0 0 0;
+  }
+  
+  header nav ul li a {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  nav {
+    position: relative;
+    width: 100%;
+    margin-top: 65px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 0%;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.1s, transform 0.1s;
+    border: 1px solid #181818;
+  }
+  
+  nav ul li a:hover {
+    background-color: #2c7da0;
+    color: #fff;
+    transform: scale(1.05);
+    /* Add this line to scale up on hover */
+  }
+  
+  nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a5f7a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  nav ul li:hover ul.dropdown {
+    display: block;
+  }
+  
+  .search-bar {
+    margin-left: auto;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-bar input[type="submit"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    background: #ff6347;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .search-bar input[type="submit"]:hover {
+    background: #ff4500;
+  }
+  
+  .register-now {
+    background-color: #ff6b6b;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .register-now:hover {
+    background-color: #cdb37d;
+    /* Darker shade for hover effect */
+  }
+  
+  
+  /* Main content styles */
+  main {
+    padding: 50px;
+    /* Increased padding for better readability */
+    max-width: 90%;
+    margin: 30px auto;
+    /* Increased margin for better spacing */
+    background-color: #e3f2fd;
+    /* Lighter background color for better contrast */
+    border-radius: 10px;
+    /* Increased border radius for a softer look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  main h1 {
+    color: #1a5f7a;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  main p {
+    font-size: 1.2em;
+    /* Increased font size for better readability */
+    margin-bottom: 25px;
+    /* Increased margin for better spacing */
+    color: #444;
+    /* Darker text color for better contrast */
+    line-height: 1.;
+    /* Increased line height for better readability */
+  }
+  
+  section {
+    margin-bottom: 40px;
+    /* Added margin for better spacing */
+    margin-top: 50px;
+  }
+  
+  section h2 {
+    font-size: 2em;
+    /* Increased font size for better hierarchy */
+    margin-top: 40px;
+    /* Increased margin for better spacing */
+    color: #020257;
+    border-bottom: 2px solid #010e0a;
+    border-top: 2px solid #010e0a;
+  }
+  
+  h3 {
+    font-size: 2em;
+    border-bottom: 2px solid rgb(1, 14, 10);
+    border-top: 2px solid rgb(1, 14, 10);
+    color: rgb(2, 2, 87);
+    margin-bottom: 50px
+  }
+  
+  section p {
+    font-size: 1.2em;
+    /* Increased font size for better readability */
+    color: #444;
+    /* Darker text color for better contrast */
+    line-height: 1.0;
+    /* Increased line height for better readability */
+  }
+  
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  
+  .box {
+    flex: 0 0 45%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+  
+  }
+  
+  section ul {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+    /* Increased margin for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    grid-gap: 20px;
+  
+  }
+  
+  section ul li {
+    background-color: #e2e2e2;
+    padding: 15px;
+    /* Increased padding for better readability */
+    margin: 10px 0;
+    border-radius: 10px;
+    /* Increased border radius for a softer look */
+  }
+  
+  .event-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* Add this line to center horizontally */
+    margin-bottom: 20px;
+  }
+  
+  .event-item .content {
+    text-align: center;
+    /* Add this line to center the text vertically and horizontally */
+  }
+  
+  .event-item img {
+    max-width: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+  
+    /* Add this to ensure the image fits within the div */
+    transform: scale(1);
+    /* Add this line */
+    transition: transform 0.3s;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .event-item img:hover {
+    transform: scale(1.05);
+    /* Add this line */
+  }
+  
+  .content-wrapper {
+    font-size: 20px;
+    border-radius: 2%;
+  }
+  
+  
+  .event-item .content {
+    flex: 1;
+  }
+  
+  .event-item h4 {
+    color: red;
+    margin-top: 0;
+  }
+  
+  .event-item p {
+    margin-bottom: 10px;
+  }
+  
+  .event-item p.green {
+    color: green;
+  }
+  
+  .content-wrapper {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 20px;
+    /* Increased margin for better spacing */
+    border-radius: 10px;
+    /* /* Increased border radius for a softer look */
+    transition: transform 0.3s;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .image img:hover,
+  .image-container img:hover {
+    transform: scale(1.05);
+    /* Add this line */
+  }
+  
+  
+  .video-container video {
+    width: 100%;
+    max-width: 500px;
+    /* Increased max width for better display */
+    height: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    /* Increased border radius for a softer look */
+    transform: scale(1);
+    /* Add this line */
+    transition: transform 0.3s;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .video-container video:hover {
+    transform: scale(1.05);
+    /* Add this line */
+  }
+  
+  .content-wrapper {
+  
+    transform: scale(1);
+    /* Add this line */
+    transition: transform 0.3s;
+  
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #1a5f7a;
+    color: #fff;
+    text-align: center;
+    padding: 0.1rem 0;
+    margin-top: 1rem;
+  
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-links {
+    margin-top: 1rem;
+  }
+  
+  .footer-links a {
+    margin: 0 5px;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidebar a {
+    margin: 10px 0;
+  }
+  
+  .sidebar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  .sidebar img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Media Queries */
+  
+  /* Large screens (Desktops) */
+  @media only screen and (min-width: 1200px) {
+  
+    /* Styles for large screens */
+    main {
+      max-width: 80%;
+    }
+  
+    .box {
+      flex: 0 0 30%;
+    }
+  
+    .image-container img {
+      max-width: 400px;
+    }
+  }
+  
+  /* Medium screens (Laptops) */
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  
+    /* Styles for medium screens */
+    main {
+      max-width: 70%;
+    }
+  
+    .box {
+      flex: 0 0 40%;
+    }
+  
+    .image-container img {
+      max-width: 300px;
+    }
+  }
+  
+  /* Small screens (Tablets) */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  
+    /* Styles for small screens */
+    main {
+      max-width: 60%;
+    }
+  
+    .box {
+      flex: 0 0 50%;
+    }
+  
+    .image-container img {
+      max-width: 200px;
+    }
+  }
+  
+  /* Extra small screens (Mobiles) */
+  @media only screen and (max-width: 767px) {
+  
+    /* Styles for extra small screens */
+    main {
+      max-width: 90%;
+    }
+  
+    .box {
+      flex: 0 0 100%;
+    }
+  
+    .image-container img {
+      max-width: 150px;
+    }
+  
+    .header-content {
+      flex-direction: column;
+    }
+  
+    .logo-container {
+      margin-bottom: 20px;
+    }
+  
+    .search-bar {
+      margin-top: 20px;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+    }
+  
+    .nav li {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Portrait orientation (Mobiles) */
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+  
+    /* Styles for portrait orientation on mobiles */
+    main {
+      padding: 20px;
+    }
+  
+    .box {
+      padding: 15px;
+    }
+  }
+  
+  /* Landscape orientation (Mobiles) */
+  @media only screen and (max-width: 767px) and (orientation: landscape) {
+  
+    /* Styles for landscape orientation on mobiles */
+    main {
+      padding: 10px;
+    }
+  
+    .box {
+      padding: 10px;
+    }
+  }

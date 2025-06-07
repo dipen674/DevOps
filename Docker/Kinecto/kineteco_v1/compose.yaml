@@ -1,0 +1,17 @@
+services:
+  frontend:
+    build: .
+    ports:
+      - "8080:80"
+  database:
+    image: "mysql:9.3.0"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - kinecto:/var/lib/mysql
+      - kinecto:/docker-entrypoint-initdb.d
+volumes:
+  kinecto:

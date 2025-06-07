@@ -1,0 +1,445 @@
+/* General body styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    transition: background-color 0.3s;
+    overflow-x: hidden;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* Header styles */
+
+header {
+    background: #1a5f7a;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.heading1 {
+    margin-left: 1px;
+}
+
+.h1 {
+    margin: -55px;
+}
+
+
+h2 {
+    margin: 10px 0 0 0;
+}
+
+header nav ul li a {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 0%;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.1s, transform 0.1s;
+    border: 1px solid #181818;
+}
+
+nav ul li a:hover {
+    background-color: #2c7da0;
+    color: #fff;
+    transform: scale(1.05);
+    /* Add this line to scale up on hover */
+}
+
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a5f7a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+.search-bar {
+    margin-left: auto;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar input[type="submit"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    background: #ff6347;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-bar input[type="submit"]:hover {
+    background: #ff4500;
+}
+
+.register-now {
+    background-color: #ff6b6b;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.register-now:hover {
+    background-color: #cdb37d;
+    /* Darker shade for hover effect */
+}
+
+/* Main content styles */
+[role="main"] {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.mainh1 {
+    color: #1a5f7a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Health categories styles */
+.health-categories {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.category {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.category img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.category h2 {
+    color: #1a5f7a;
+    margin-bottom: 10px;
+}
+
+.category p {
+    margin-bottom: 15px;
+}
+
+.category h3 {
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+.category ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #1a5f7a;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.read-more:hover {
+    background-color: #2c7da0;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Health info styles */
+.health-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.benefits,
+.tips {
+    width: 48%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.health-info h2 {
+    color: #1a5f7a;
+    margin-bottom: 15px;
+}
+
+.health-info ul {
+    padding-left: 20px;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 0 auto;
+    transform: scale(1);
+    transition: transform 0.3s;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.video-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.video-container video:hover {
+    transform: scale(1.05);
+    /* Add this line */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .health-categories {
+        flex-direction: column;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+    .category {
+        width: 100%;
+    }
+
+    .health-info {
+        flex-direction: column;
+    }
+
+    .benefits,
+    .tips {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 20px;
+        margin-left: 0%;
+    }
+
+    .h1 {
+        margin-top: 5px;
+        font-size: 24px;
+    }
+
+    .logo-container {
+        margin-left: 0px;
+    }
+
+    header .search-bar {
+        width: 100%;
+        margin-top: 10px;
+        justify-content: right;
+        text-align: end;
+    }
+
+    header .search-bar input[type="text"] {
+        width: 30%;
+
+    }
+
+    header .search-bar button {
+        width: 40%;
+        justify-content: right;
+        text-align: end;
+    }
+
+    nav ul li:hover ul.dropdown {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width: 1028px) {
+    header h1 {
+      font-size: 20px;
+      margin-left: 0%;
+    }
+    .health-categories {
+        flex-direction: column;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .category {
+            width: 100%;
+        }
+    
+    .h1{
+      margin-top:5px;
+      font-size: 24px;
+    }
+    .logo-container{
+      margin-left: 0px;
+    }
+    header .search-bar {
+      width: 100%;
+      margin-top: 10px;
+      justify-content: right;
+      text-align: end;
+    }
+  
+    header .search-bar input[type="text"] {
+      width: 30%;
+  
+    }
+  
+    header .search-bar button {
+      width: 40%;
+      justify-content: right;
+      text-align: end;
+    }
+    nav ul li:hover ul.dropdown {
+      display: block;
+    }
+    
+}
+
+/* Footer styles */
+footer {
+    background-color: #1a5f7a;
+    color: #fff;
+    text-align: center;
+    padding: 0.1rem 0;
+    margin-top: 1rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    margin: 0 5px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar a {
+    margin: 10px 0;
+}
+
+.sidebar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.sidebar img:hover {
+    transform: scale(1.1);
+}

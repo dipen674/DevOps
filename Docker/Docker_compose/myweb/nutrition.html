@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Health Tracker - Student Guide - LBEF</title>
+    <link rel="stylesheet" type="text/css" href="css/nutrition.css">
+    <link rel="icon" href="./Images/logo.jpeg" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script>
+        function showPopup() {
+            alert("Thank you for showing interest! Registration will be available soon.");
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+
+            <div class="logo-container">
+
+                <img src="Images/logo.jpeg" alt="LBEF Logo" class="logo">
+
+                <h1 class="heading1">LBEF</h1>
+            </div>
+
+            <div class="search-bar">
+
+                <form action="/search" method="get">
+
+                    <input type="text" name="query" placeholder="Search...">
+
+                    <input type="submit" value="Search">
+
+                </form>
+
+            </div>
+
+        </div>
+        <h1 class="headerh1">Student Guide - Health and Wellness</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li>
+                    <a href="Studentwellness.html">Student Wellness</a>
+                    <ul class="dropdown">
+                        <li><a href="Physical-health.html">Physical&nbsp;Health</a></li>
+                        <li><a href="Spiritual-health.html">Spiritual Health</a></li>
+                        <li><a href="nutrition.html">Nutrition Health</a></li>
+                        <li><a href="mental-health.html">Mental Health</a></li>
+                        <li><a href="Available Care.html">Available Care</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="getinvolved.html">Get Involved</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="register.html" class="register-now" onclick="showPopup()">Register Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--main-->
+    <main>
+        <div class="main-content">
+            <h1 class="mainh1">Nutrition Health Tracker - Student Guide</h1>
+            <p class="mainp">Welcome to the Nutrition Health Tracker, designed to help you maintain a healthy lifestyle
+                while managing
+                your academic workload. Use this guide to track your nutritional intake, monitor your health, and get
+                tips
+                on maintaining a balanced diet.</p>
+        </div>
+
+
+        <section id="input-section">
+            <h2>Calculate Your BMI</h2>
+            <form id="bmi-form">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" step="0.1" required>
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" step="0.1" required>
+                <button type="button" onclick="calculateBMI()">Calculate</button>
+            </form>
+        </section>
+
+        <section id="result-section">
+            <h2>Your BMI Result</h2>
+            <p id="bmi-result">Enter your weight and height to calculate your BMI.</p>
+            <div id="bmi-chart">
+                <h3>BMI Chart</h3>
+                <!--tabless-->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>BMI Range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Underweight</td>
+                            <td>&lt; 18.5</td>
+                        </tr>
+                        <tr>
+                            <td>Normal weight</td>
+                            <td>18.5 - 24.9</td>
+                        </tr>
+                        <tr>
+                            <td>Overweight</td>
+                            <td>25 - 29.9</td>
+                        </tr>
+                        <tr>
+                            <td>Obesity</td>
+                            <td>&gt;= 30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="nutrition-guide">
+            <h2>Nutritional Guide and Tips</h2>
+            <p>Maintaining a balanced diet is crucial for your overall health and well-being. Here's a comprehensive
+                guide to help you make healthier food choices:</p>
+            <ul>
+                <li><strong>Fruits and Vegetables:</strong> Aim to fill half your plate with fruits and vegetables. They
+                    are rich in vitamins, minerals, and fiber, which are essential for your body.</li>
+                <li><strong>Whole Grains:</strong> Choose whole grains like brown rice, oatmeal, and whole wheat bread
+                    over refined grains. Whole grains are packed with nutrients and fiber.</li>
+                <li><strong>Proteins:</strong> Include a variety of protein sources in your diet, such as lean meats,
+                    poultry, fish, beans, nuts, and seeds. Protein is vital for building and repairing tissues.</li>
+                <li><strong>Hydration:</strong> Drink plenty of water throughout the day. Staying hydrated helps
+                    maintain your body's functions and energy levels.</li>
+                <li><strong>Limit Added Sugars and Sodium:</strong> Reduce the intake of foods and drinks high in added
+                    sugars and sodium. Read labels to make informed choices.</li>
+                <li><strong>Portion Control:</strong> Be mindful of portion sizes to avoid overeating. Use smaller
+                    plates and bowls to help control portions.</li>
+                <li><strong>Balanced Meals:</strong> Try to balance each meal with a mix of macronutrients
+                    (carbohydrates, proteins, and fats) to keep your energy levels stable throughout the day.</li>
+                <li><strong>Regular Meals:</strong> Eat regular meals and snacks to maintain your metabolism and energy
+                    levels. Avoid skipping meals, especially breakfast.</li>
+            </ul>
+        </section>
+
+        <section id="images-gallery">
+            <h3>Nutritional diet</h3>
+            <div class="image-container">
+                <img src="Images/nutrition health1.jpg" alt="Nutrition Health 1">
+                <img src="Images/nutrition healthh.jpeg" alt="Nutrition Health 2">
+                <img src="Images/nutrition health diet plan.jpeg" alt="Nutrition Health Diet Plan">
+            </div>
+        </section>
+
+
+        <div class="video-container">
+            <h3>Watch Video</h3>
+            <video width="500" height="300" controls>
+                <source src="videos/nutrition_health.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Health and Wellness Student Organization</p>
+        <p>Contact Us: <a href="tel:+123456789">+123456789</a> | <a href="mailto:info@lbef.edu">info@lbef.edu</a></p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+
+    <aside class="sidebar">
+        <a href="https://www.facebook.com"><img src="Images/fblogo.avif" alt="Facebook"></a>
+        <a href="https://www.twitter.com"><img src="Images/twitterlogo.webp" alt="Twitter"></a>
+        <a href="https://www.instagram.com"><img src="Images/instagram.jpeg" alt="Instagram"></a>
+    </aside>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!--javascript-->
+<script>
+    function calculateBMI() {
+        var weight = document.getElementById('weight').value;
+        var height = document.getElementById('height').value;
+
+        if (weight > 0 && height > 0) {
+            var finalBmi = weight / ((height / 100) * (height / 100));
+            var bmiResult = document.getElementById('bmi-result');
+            finalBmi = finalBmi.toFixed(1); // Round to 1 decimal place
+
+            bmiResult.innerHTML = 'Your BMI is ' + finalBmi + '. ';
+
+            if (finalBmi < 18.5) {
+                bmiResult.innerHTML += 'You are underweight.';
+            } else if (finalBmi >= 18.5 && finalBmi <= 24.9) {
+                bmiResult.innerHTML += 'You have a normal weight.';
+            } else if (finalBmi >= 25 && finalBmi <= 29.9) {
+                bmiResult.innerHTML += 'You are overweight.';
+            } else if (finalBmi >= 30) {
+                bmiResult.innerHTML += 'You are obese.';
+            }
+        } else {
+            alert("Please fill in all fields with valid numbers.");
+        }
+    }
+</script>
+
+
+</body>
+
+</html>

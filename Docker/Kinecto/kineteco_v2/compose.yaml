@@ -1,0 +1,25 @@
+services:
+  scheduler:
+    build: scheduler/.
+    ports:
+      - "8000:80"
+    depends_on:
+      - database
+  storefront: 
+    build: storefront/.
+    ports:
+      - "8001:80"
+    depends_on:
+      - database
+  database: 
+    image: "mysql:${TAG}"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./mysql:/docker-entrypoint-initdb.d:ro
+      - kineteco:/var/lib/mysql
+volumes:
+  kineteco: 
