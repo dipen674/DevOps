@@ -5,13 +5,15 @@
 
 set -e
 
-if ! command -v docker >/dev/null 2>&1; then
-  echo "Docker not found → installing…"
-  curl -fsSL https://get.docker.com -o get-docker.sh
-  bash get-docker.sh
-  usermod -aG docker vagrant
-  rm -f get-docker.sh
-fi
+#Docker is already installed from vagrant file
+
+# if ! command -v docker >/dev/null ; then
+#   echo "Docker not found → installing…"
+#   curl -fsSL https://get.docker.com -o get-docker.sh
+#   bash get-docker.sh
+#   usermod -aG docker vagrant
+#   rm -f get-docker.sh
+# fi
 
 #Change with the version you want to install
 HARBOR_VERSION="v2.13.1"
