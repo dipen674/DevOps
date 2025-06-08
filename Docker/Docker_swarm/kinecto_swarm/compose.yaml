@@ -1,0 +1,5 @@
+services:
+  scheduler:
+    build: scheduler/.
+  storefront: 
+    build: storefront/.

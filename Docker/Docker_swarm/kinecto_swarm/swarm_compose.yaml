@@ -1,0 +1,38 @@
+services:
+  storefront:
+    image: deependrabhatta/swarm_clustre:storefront
+    ports:
+      - "8000:80"    # localhost:8000 → container:80
+    networks:
+      - app_net
+    deploy:
+      replicas: 3
+
+  scheduler:
+    image: deependrabhatta/swarm_clustre:scheduler
+    ports:
+      - "9000:80"    # localhost:9000 → container:80
+    networks:
+      - app_net
+    deploy:
+      replicas: 4
+
+  database:
+    image: mysql:${TAG}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./mysql:/docker-entrypoint-initdb.d:ro
+      - db_data:/var/lib/mysql
+    networks:
+      - app_net 
+volumes:
+  db_data:
+
+networks:
+  app_net:
+    driver: overlay
+
