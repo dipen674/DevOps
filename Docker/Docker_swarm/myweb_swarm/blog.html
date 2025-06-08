@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Health and Wellness - Student Guide - LBEF</title>
+    <link rel="icon" href="./Images/logo.jpeg" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/styleblog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        function showContent(contentId) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function (content) {
+                content.classList.add('hidden');
+            });
+            document.getElementById(contentId).classList.remove('hidden');
+        }
+
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            var overlay = document.querySelector('.overlay');
+            modal.classList.add('visible');
+            overlay.classList.add('visible');
+        }
+
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            var overlay = document.querySelector('.overlay');
+            modal.classList.remove('visible');
+            overlay.classList.remove('visible');
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="Images/logo.jpeg" alt="LBEF Logo" class="logo">
+                <h1 class="heading1">LBEF</h1>
+            </div>
+            <div class="search-bar">
+                <form action="/search" method="get">
+                    <input type="text" name="query" placeholder="Search...">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </div>
+        <h1 class="h1">Student Guide - Health and Wellness</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li>
+                    <a href="Studentwellness.html">Student Wellness</a>
+                    <ul class="dropdown">
+                        <li><a href="Physical-health.html">Physical&nbsp;Health</a></li>
+                        <li><a href="Spiritual-health.html">Spiritual Health</a></li>
+                        <li><a href="nutrition.html">Nutrition Health</a></li>
+                        <li><a href="mental-health.html">Mental Health</a></li>
+                        <li><a href="Available Care.html">Available Care</a></li>
+                    </ul>
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="getinvolved.html">Get Involved</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="register.html" class="register-now" onclick="showPopup()">Register Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to Our Blog</h1>
+        <p>Stay updated with the latest news, tips, and insights on health and wellness. Our blog features articles written by experts, students, and wellness enthusiasts to help you lead a healthier lifestyle.</p>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="showContent('mood-mind')">Mood and Mind</a></li>
+            <li><a href="javascript:void(0)" onclick="showContent('staying-healthy')">Staying Healthy</a></li>
+            <li><a href="javascript:void(0)" onclick="showContent('healthcare-disparities')">Healthcare Disparities</a></li>
+            <li><a href="javascript:void(0)" onclick="showContent('disease-condition')">Disease and Condition</a></li>
+            <li><a href="javascript:void(0)" onclick="showContent('fitness-exercise')">Fitness and Exercise</a></li>
+        </ul>
+
+        <div id="mood-mind" class="content hidden">
+            <h2 align="center">Mood and Mind</h2>
+            <div class="content-container">
+                <div class="image-container">
+                    <img src="./Images/mood and mind.jpeg" alt="Mood and Mind Image" width="550" height="350" onclick="openModal('modal-mood-mind')">
+                    <div class="image-caption">Published Feb 18, 2022</div>
+                </div>
+                <div class="text-content">
+                    <p>LBEF Healthcare understands the deep impact of mental health. Our passionate team of mental health professionals renders empathetic care through evidence-based therapies to those at risk with mood disorders, anxiety, depression, and other problems related to mental health. We hope to recover mental wellness among our clients through individual treatment plans and holistic activities so they could live life to the fullest.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="staying-healthy" class="content hidden">
+            <h2 align ="center">Published jan 12, 2022</h2>
+            <div class="content-container">
+                <div class="image-container">
+                    <img src="./Images/stayinghealthy.jpg" alt="Staying Healthy Image" width="600" height="300" onclick="openModal('modal-staying-healthy')">
+                    <div class="image-caption">Staying Healthy Image</div>
+                    <img src="c:\Users\User\OneDrive\Desktop\....jpeg" alt="Additional Image" width="600" height="300" onclick="openModal('modal-additional-image')">
+                    <div class="image-caption">Published March 6, 2022</div>
+                </div>
+                <div class="text-content">
+                    <p>At LBEF Healthcare, we believe in proactive healthcare management to prevent illness and promote longevity. Our comprehensive wellness initiatives include routine screenings, vaccinations, and health education programs aimed at preventing disease and maintaining optimal health. We emphasize the importance of nutrition, stress management, and regular health check-ups to empower individuals in taking control of their well-being. By fostering healthy habits and early detection strategies, we support our community in staying healthy and thriving.</p>
+                    <p>Staying healthy is not just about physical fitness but also about mental well-being. It involves maintaining a balanced diet, engaging in regular physical activity, managing stress effectively, and ensuring regular health check-ups. These habits not only prevent illnesses but also contribute to a higher quality of life.</p>
+                    <p>Our approach at LBEF Healthcare combines medical expertise with a commitment to holistic wellness. We offer personalized health plans that cater to individual needs, ensuring that each person receives the care and support they deserve. Whether it's through our fitness programs, mental health services, or preventive care measures, we strive to empower our community to lead healthier lives.</p>
+                    <p>Join us in our journey towards better health and well-being. Together, we can create a healthier future for everyone.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="healthcare-disparities" class="content hidden">
+            <h2 align="center">Healthcare Disparities</h2>
+            <div class="content-container">
+                <div class="image-container">
+                    <img src="./Images/WEB image.jpeg" alt="Healthcare Disparities Image" width="450" height="250" onclick="openModal('modal-healthcare-disparities')">
+                    <div class="image-caption">Published Feb 27, 2022</div>
+                </div>
+                <div class="text-content">
+                    <p>This is why health disparities present the core need to be addressed within LBEF Healthcare. This is the elimination of barriers to seeking health services, so that they are all-inclusive and culturally sensitive through the outreach programs that are designed and developed for underserved communities, so they get proper care without thinking about their socio-economic status, whence they come ethnically, or even geographically. A supportive healthcare environment will overall elevate health status to all people and equalize health care delivery.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="disease-condition" class="content hidden">
+            <h2 align="center">Disease and Condition</h2>
+            <div class="content-container">
+                <div class="image-container">
+                    <img src="./Images/HC.jpeg" alt="Disease and Condition Image" width="500" height="200" onclick="openModal('modal-disease-condition')">
+                    <div class="image-caption">Published July 9, 2022</div>
+                </div>
+                <div class="text-content">
+                    <p>LBEF Healthcare is dedicated to the diagnosis, treatment, and management of a wide range of diseases and conditions. Our multidisciplinary team of medical specialists offers expertise in areas such as cardiology, neurology, oncology, and more. Through advanced diagnostics and personalized treatment plans, we strive to optimize outcomes for patients dealing with chronic illnesses and acute conditions. Our commitment to compassionate care and medical excellence ensures that each patient receives the highest standard of treatment tailored to their specific healthcare needs.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="fitness-exercise" class="content hidden">
+            <h2 align="center">Fitness and Exercise</h2>
+            <div class="content-container">
+                <div class="image-container">
+                    <img src="./Images/fitness.jpg" alt="Fitness and Exercise Image" width="450" height="450" onclick="openModal('modal-fitness-exercise')">
+                    <div class="image-caption">Published September 17, 2023</div>
+                </div>
+                <div class="text-content">
+                    <p>Physical fitness is crucial for maintaining overall health. At LBEF Healthcare, we offer a variety of fitness programs and resources to help you stay active and healthy. From personalized exercise plans to group fitness classes, we cater to all fitness levels and preferences. Our team of fitness experts is dedicated to helping you achieve your health and wellness goals through safe and effective exercise routines.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay for the modal -->
+        <div class="overlay" onclick="closeModal('modal-mood-mind')"></div>
+        <div class="overlay" onclick="closeModal('modal-staying-healthy')"></div>
+        <div class="overlay" onclick="closeModal('modal-healthcare-disparities')"></div>
+        <div class="overlay" onclick="closeModal('modal-disease-condition')"></div>
+        <div class="overlay" onclick="closeModal('modal-fitness-exercise')"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Health and Wellness Student Organization</p>
+        <p>Contact Us: <a href="tel:+123456789">+123456789</a> | <a href="mailto:info@lbef.edu">info@lbef.edu</a></p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+
+    <aside class="sidebar">
+        <a href="https://www.facebook.com"><img src="Images/fblogo.avif" alt="Facebook"></a>
+        <a href="https://www.twitter.com"><img src="Images/twitterlogo.webp" alt="Twitter"></a>
+        <a href="https://www.instagram.com"><img src="Images/instagram.jpeg" alt="Instagram"></a>
+    </aside>
+    <script>
+        // Optional: Close modal by clicking outside the modal content
+        var modals = document.querySelectorAll('.modal');
+        modals.forEach(function (modal) {
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModal(modal.id);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

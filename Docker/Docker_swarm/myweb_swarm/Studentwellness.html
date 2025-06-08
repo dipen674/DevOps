@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Wellness - Student Guide - LBEF</title>
+    <link rel="icon" href="./Images/logo.jpeg" type="image/png">
+    <link rel="stylesheet" href="css/stylestudentwellness.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+
+            <div class="logo-container">
+
+                <img src="Images/logo.jpeg" alt="LBEF Logo" class="logo">
+
+                <h1 class="heading1">LBEF</h1>
+            </div>
+
+            <div class="search-bar">
+
+                <form action="/search" method="get">
+
+                    <input type="text" name="query" placeholder="Search...">
+
+                    <input type="submit" value="Search">
+
+                </form>
+
+            </div>
+
+        </div>
+        <h1 class="headerh1">Student Guide - Health and Wellness</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li>
+                    <a href="Studentwellness.html">Student Wellness</a>
+                    <ul class="dropdown">
+                        <li><a href="Physical-health.html">Physical&nbsp;Health</a></li>
+                        <li><a href="Spiritual-health.html">Spiritual Health</a></li>
+                        <li><a href="nutrition.html">Nutrition Health</a></li>
+                        <li><a href="mental-health.html">Mental Health</a></li>
+                        <li><a href="Available Care.html">Available Care</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="getinvolved.html">Get Involved</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="register.html" class="register-now" onclick="showPopup()">Register Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main">
+        <div class="container">
+            <h2>Student Wellness</h2>
+
+            <div class="wellness-row">
+                <div class="wellness-item">
+                    <img src="./Images/physical.jpg" alt="Physical Health" class="wellness-img">
+                    <h3>Physical Health</h3>
+                    <p>Discover the importance of regular exercise, proper sleep, and maintaining a balanced lifestyle
+                        for optimal physical well-being.</p>
+                    <a href="#" class="wellness-link"
+                        onclick="toggleWellnessContent(this, 'physical'); return false;">Read More</a>
+                    <div class="wellness-content" style="display: none;">
+                        <p>Regular physical activity is crucial for maintaining good health. It can help reduce the risk
+                            of chronic diseases, improve mood, and boost energy levels. Our physical health program
+                            offers guidance on exercise routines, sleep hygiene, and overall wellness practices.</p>
+                        <a href="Physical-health.html" class="read-more-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="wellness-item">
+                    <img src="./Images/mentalhealth1.jpeg" alt="Mental Health" class="wellness-img">
+                    <h3>Mental Health</h3>
+                    <p>Explore strategies for managing stress, anxiety, and maintaining good mental health throughout
+                        your academic journey.</p>
+                    <a href="#" class="wellness-link"
+                        onclick="toggleWellnessContent(this, 'mental'); return false;">Read More</a>
+                    <div class="wellness-content" style="display: none;">
+                        <p>Mental health is just as important as physical health. Our mental health resources cover
+                            topics such as stress management, anxiety reduction techniques, and strategies for
+                            maintaining emotional well-being during your academic journey.</p>
+                        <a href="mental-health.html" class="read-more-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="wellness-item">
+                    <img src="./Images/spiritual.jpg" alt="Spiritual Health" class="wellness-img">
+                    <h3>Spiritual Health</h3>
+                    <p>Learn about practices that can help you find meaning, purpose, and inner peace, regardless of
+                        your religious or philosophical beliefs.</p>
+                    <a href="#" class="wellness-link"
+                        onclick="toggleWellnessContent(this, 'spiritual'); return false;">Read More</a>
+                    <div class="wellness-content" style="display: none;">
+                        <p>Spiritual health involves finding meaning and purpose in life. Whether through meditation,
+                            mindfulness, or religious practices, nurturing your spiritual side can contribute to overall
+                            well-being and resilience.</p>
+                        <a href="Spiritual-health.html" class="read-more-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wellness-row">
+                <div class="wellness-item">
+                    <img src="./Images/nutritionpixel.jpg" alt="Nutrition Health" class="wellness-img">
+                    <h3>Nutrition Health</h3>
+                    <p>Understand the basics of a balanced diet and how proper nutrition can boost your energy, focus,
+                        and overall health.</p>
+                    <a href="#" class="wellness-link"
+                        onclick="toggleWellnessContent(this, 'nutrition'); return false;">Read More</a>
+                    <div class="wellness-content" style="display: none;">
+                        <p>A balanced diet is essential for maintaining good health and academic performance. Learn
+                            about proper nutrition, meal planning, and how to make healthy food choices on campus.</p>
+                        <a href="nutrition.html" class="read-more-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="wellness-item">
+                    <img src="./Images/availablecare.jpg" alt="Available Care" class="wellness-img">
+                    <h3>Available Care</h3>
+                    <p>Find information about health services, counseling, and support resources available to you on
+                        campus and in the community.</p>
+                    <a href="#" class="wellness-link" onclick="toggleWellnessContent(this, 'care'); return false;">Read
+                        More</a>
+                    <div class="wellness-content" style="display: none;">
+                        <p>LBEF offers a range of health and wellness services to support students. From on-campus
+                            clinics to counseling services, find out about the resources available to help you maintain
+                            your physical and mental well-being.</p>
+                        <a href="Available Care.html" class="read-more-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="members">
+            <h2>Our Members</h2>
+            <div class="member-row">
+                <div class="member">
+                    <img src="./Images/member1.jpg" alt="Member 1" class="member-img">
+                    <p>Saraswoti Mainali</p>
+                    <p>President</p>
+                </div>
+                <div class="member">
+                    <img src="./Images/member2.jpeg" alt="Member 2" class="member-img">
+                    <p>Aayuska Magar</p>
+                    <p>Vice President</p>
+                </div>
+                <div class="member">
+                    <img src="./Images/member3.jpeg" alt="Member 3" class="member-img">
+                    <p>Aayusha Shrestha</p>
+                    <p>Secretary</p>
+                </div>
+                <div class="member">
+                    <img src="./Images/member4.jpeg" alt="Member 4" class="member-img">
+                    <p>Arpan Nepali</p>
+                    <p>Treasurer</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="existing-members">
+            <h2>Existing Members List</h2>
+            <button id="toggleMembersList">See Existing Members List</button>
+            <table id="membersTable" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Saraswoti Mainali </td>
+                        <td>President</td>
+                        <td>saraswotimainali11@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Aayuska Magar</td>
+                        <td>Vice President</td>
+                        <td>aayuska@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Aayusha Shrestha</td>
+                        <td>Secretary</td>
+                        <td>aayusha32@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Arpan Nepali</td>
+                        <td>Treasurer</td>
+                        <td>arpan23@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Health and Wellness Student Organization</p>
+        <p>Contact Us: <a href="tel:+123456789">+123456789</a> | <a href="mailto:info@lbef.edu">info@lbef.edu</a></p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+
+    <aside class="sidebar">
+        <a href="https://www.facebook.com"><img src="Images/fblogo.avif" alt="Facebook"></a>
+        <a href="https://www.twitter.com"><img src="Images/twitterlogo.webp" alt="Twitter"></a>
+        <a href="https://www.instagram.com"><img src="Images/instagram.jpeg" alt="Instagram"></a>
+    </aside>
+    <script>
+        document.getElementById('toggleMembersList').addEventListener('click', function () {
+            var table = document.getElementById('membersTable');
+            if (table.style.display === 'none') {
+                table.style.display = 'table';
+                this.textContent = 'Hide Existing Members List';
+            } else {
+                table.style.display = 'none';
+                this.textContent = 'See Existing Members List';
+            }
+        });
+        function toggleWellnessContent(link, category) {
+            var content = link.nextElementSibling;
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                link.textContent = "Show Less";
+            } else {
+                content.style.display = "none";
+                link.textContent = "Learn More";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+services:
+  myweb:
+    image: deependrabhatta/swarm_clustre:myweb_swarm
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 3
+

@@ -1,0 +1,7 @@
+services:
+  myweb:
+    build: .
+
+
+
+#Run this if you want to create your won image. If you don't want to use the swarm_compose.yaml file will automatically pull image form dockerhub repository

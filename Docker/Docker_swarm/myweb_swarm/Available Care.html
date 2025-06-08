@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Guide - Health and Wellness</title>
+    <link rel="icon" href="./Images/logo.jpeg" type="image/png">
+    <link rel="stylesheet" href="css/stylestudentwellness.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+    <style>
+        .content-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 50px;
+            padding: 15px;
+        }
+
+        .content-box {
+            background-color: white;
+            border: 2px solid#0d0101;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content-box h3 {
+            margin-top: 0;
+        }
+
+        /* Ensure all photos have the same size */
+        .content-box img {
+            width: 250px; /* Adjust the width as needed */
+            height: 450px; /* Adjust the height as needed */
+            object-fit: cover; /* Ensures aspect ratio is maintained */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            border-radius: 8px; /* Rounded corners for the images */
+        }
+
+        /* Pop-up effect on hover */
+        .content-box img:hover {
+            transform: scale(1.1); /* Slightly enlarge image on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="Images/logo.jpeg" alt="LBEF Logo" class="logo">
+                <h1 class="heading1">LBEF</h1>
+            </div>
+            <div class="search-bar">
+                <form action="/search" method="get">
+                    <input type="text" name="query" placeholder="Search...">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </div>
+        <h1 class="headerh1">Student Guide - Health and Wellness</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li>
+                    <a href="Studentwellness.html">Student Wellness</a>
+                    <ul class="dropdown">
+                        <li><a href="Physical-health.html">Physical&nbsp;Health</a></li>
+                        <li><a href="Spiritual-health.html">Spiritual Health</a></li>
+                        <li><a href="nutrition.html">Nutrition Health</a></li>
+                        <li><a href="mental-health.html">Mental Health</a></li>
+                        <li><a href="Available Care.html">Available Care</a></li>
+                    </ul>
+                </li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="getinvolved.html">Get Involved</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="register.html" class="register-now" onclick="showPopup()">Register Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <h1 align="center" class="mainh1">Available Care</h1>
+        <div class="content-container">
+            <div class="content-box">
+                <h3>General Medical Care</h3>
+                <img src="Images/general.jpg" alt="General Medical Care">
+                <p>Routine check-ups, treatment for common illnesses, and management of chronic conditions.</p>
+            </div>
+            <div class="content-box">
+                <h3>Mental Health Services</h3>
+                <img src="Images/mental.jpeg" alt="Mental Health Services">
+                <p>Counseling, therapy sessions, and support groups to help students manage stress, anxiety, and other mental health concerns.</p>
+            </div>
+            <div class="content-box">
+                <h3>Women's Health</h3>
+                <img src="Images/Women Health.webp">
+                <p>Gynecological exams, Female Health Care Advices, and more.</p>
+            </div>
+            <div class="content-box">
+                <h3>Men's Health</h3>
+                <img src="Images/Mans health.jpeg">
+                <p>Health screenings, sexual health consultations, and treatment for male-specific conditions.</p>
+            </div>
+            <div class="content-box">
+                <h3>Immunizations</h3>
+                <img src="Images/immunization.webp" alt="Immunizations">
+            
+                <p>Vaccinations for flu, HPV, meningitis, and other preventable diseases.</p>
+            </div>
+            <div class="content-box">
+                <h3>Laboratory Services</h3>
+                <img src="Images/lab.jpg">
+                <p>Blood tests, urinalysis, and other diagnostic tests.</p>
+            </div>
+            <div class="content-box">
+                <h3>Pharmacy Services</h3>
+                <img src="Images/Pharmacy.jpeg" alt="Pharmacy Services">
+                <p>On-site pharmacy for prescription medications and over-the-counter drugs.</p>
+            </div>
+            <div class="content-box">
+                <h3>Health Education</h3>
+                <img src="Images/R.jpeg" alt="Health Education">
+                <p>Workshops and resources on nutrition, exercise, sexual health, and substance abuse prevention.</p>
+            </div>
+            <div class="content-box">
+                <h3>Emergency Care</h3>
+                <img src="Images/Emergency care.jpg">
+                <p>First aid and emergency response for urgent situations.</p>
+            </div>
+            <div class="content-box">
+                <h3>Telehealth Services</h3>
+                <img src="Images/Telehealth.jpeg" alt="Telehealth Services">
+                <p>Virtual consultations with healthcare providers for convenience and accessibility.</p>
+            </div>
+            <div class="content-box">
+                <h3>Nutrition Counseling</h3>
+                <img src="Images/OIP (3).jpeg" alt="Nutrition Counseling">
+                <p>Personalized dietary advice and meal planning to support healthy eating habits.</p>
+            </div>
+            <div class="content-box">
+                <h3>Physical Therapy</h3>
+                <img src="Images/Therapy.jpg" alt="Physical Therapy">
+                <p>Rehabilitation services to help students recover from injuries and improve physical function.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Health and Wellness Student Organization</p>
+        <p>Contact Us: <a href="tel:+123456789">+123456789</a> | <a href="mailto:info@lbef.edu">info@lbef.edu</a></p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+
+    <aside class="sidebar">
+        <a href="https://www.facebook.com"><img src="Images/fblogo.avif" alt="Facebook"></a>
+        <a href="https://www.twitter.com"><img src="Images/twitterlogo.webp" alt="Twitter"></a>
+        <a href="https://www.instagram.com"><img src="Images/instagram.jpeg" alt="Instagram"></a>
+    </aside>
+</body>
+</html>

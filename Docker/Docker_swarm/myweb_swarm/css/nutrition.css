@@ -1,0 +1,521 @@
+/* General body styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    transition: background-color 0.3s;
+    overflow-x: hidden;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* Header styles */
+
+header {
+    background: #1a5f7a;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.heading1 {
+    margin-left: 1px;
+}
+
+.headerh1 {
+    margin: -55px;
+}
+
+
+h2 {
+    margin: 10px 0 0 0;
+}
+
+header nav ul li a {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 0%;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.1s, transform 0.1s;
+    border: 1px solid #181818;
+}
+
+nav ul li a:hover {
+    background-color: #2c7da0;
+    color: #fff;
+    transform: scale(1.05);
+    /* Add this line to scale up on hover */
+}
+
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a5f7a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+.search-bar {
+    margin-left: auto;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar input[type="submit"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    background: #ff6347;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-bar input[type="submit"]:hover {
+    background: #ff4500;
+}
+
+.register-now {
+    background-color: #ff6b6b;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.register-now:hover {
+    background-color: #cdb37d;
+    /* Darker shade for hover effect */
+}
+
+
+/* Specific styles for the Nutrition Health Tracker page */
+.mainh1 {
+    margin: 5px;
+    margin-left: 20px;
+}
+
+.mainp {
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#input-section {
+    text-align: left;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#input-section h2 {
+    color: black;
+}
+
+#input-section form {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s, background-color 0.5s, opacity 0.5s, color 0.5s, box-shadow 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#input-section form:hover {
+    transform: translateX(10px);
+    background-color: #d1e7c5;
+    opacity: 0.9;
+}
+
+#input-section label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333;
+    transition: color 0.5s;
+    transition-timing-function: ease-in;
+}
+
+#input-section input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: box-shadow 0.5s, border-color 0.5s;
+    transition-timing-function: linear;
+}
+
+#input-section input:focus {
+    box-shadow: 0 0 8px rgba(150, 189, 231, 0.5);
+    border-color: #16d0d3;
+}
+
+#input-section button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #16d0d3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    transition-timing-function: ease-out;
+}
+
+#input-section button:hover {
+    background-color: #028a3d;
+    transform: scale(1.05);
+}
+
+/* Styles for the output table */
+#output table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #e2f0d9;
+}
+
+td button {
+    padding: 5px 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: #ff4500;
+}
+
+/* Styles for result-section */
+#result-section {
+    text-align: left;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#result-section h2 {
+    color: #025335;
+}
+
+#result-section p {
+    color: #333;
+}
+
+#result-section ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #C7B8EA;
+}
+
+/* Styles for BMI chart */
+#bmi-chart {
+    margin: 20px 0;
+}
+
+#bmi-chart table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+#bmi-chart th,
+#bmi-chart td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#bmi-chart th {
+    background-color: #16d0d3;
+    color: white;
+}
+
+/* Styles for the new Nutritional Guide and Tips section */
+#nutrition-guide {
+    text-align: left;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#nutrition-guide h2 {
+    color: #025335;
+}
+
+#nutrition-guide p {
+    color: #333;
+}
+
+#nutrition-guide ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #025335;
+}
+
+#images-gallery {
+    text-align: center;
+    background-color: #d9f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#images-gallery h3 {
+    color: #025335;
+}
+
+#images-gallery img {
+    width: 250px;
+    /* Set a fixed width */
+    height: 150px;
+    /* Set a fixed height */
+    object-fit: cover;
+    /* Ensure the image covers the area without distortion */
+    margin: 10px;
+    /* Space between images */
+    border-radius: 10px;
+    /* Optional: Add rounded corners */
+    box-shadow: 0 0 10px;
+    /* Optional: Add a shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth transition on hover */
+}
+
+#images-gallery img:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the image on hover */
+    box-shadow: 0 0 15px peru;
+    /* Intensify shadow on hover */
+}
+
+.video-container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1a5f7a;
+    color: #fff;
+    text-align: center;
+    padding: 0.1rem 0;
+    margin-top: 1rem;
+
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    margin: 0 5px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar a {
+    margin: 10px 0;
+}
+
+.sidebar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.sidebar img:hover {
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+        margin-left: 0%;
+    }
+
+    .headerh1 {
+        margin-top: 5px;
+        font-size: 24px;
+    }
+
+    .logo-container {
+        margin-left: 0px;
+    }
+
+    header .search-bar {
+        width: 100%;
+        margin-top: 10px;
+        justify-content: right;
+        text-align: end;
+    }
+
+    header .search-bar input[type="text"] {
+        width: 30%;
+
+    }
+
+    header .search-bar button {
+        width: 40%;
+        justify-content: right;
+        text-align: end;
+    }
+
+    nav ul li:hover ul.dropdown {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width: 1028px) {
+    header h1 {
+        font-size: 20px;
+        margin-left: 0%;
+    }
+
+    .health-categories {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .category {
+        width: 100%;
+    }
+
+    .headerh1 {
+        margin-top: 5px;
+        font-size: 24px;
+    }
+
+    .logo-container {
+        margin-left: 0px;
+    }
+
+    header .search-bar {
+        width: 100%;
+        margin-top: 10px;
+        justify-content: right;
+        text-align: end;
+    }
+
+    header .search-bar input[type="text"] {
+        width: 30%;
+
+    }
+
+    header .search-bar button {
+        width: 40%;
+        justify-content: right;
+        text-align: end;
+    }
+
+    nav ul li:hover ul.dropdown {
+        display: block;
+    }
+
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LBEF Health and Wellness</title>
+    <link rel="icon" href="./Images/logo.jpeg" type="image/png">
+    <link rel="stylesheet" href="css/styleregister.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+
+            <div class="logo-container">
+
+                <img src="Images/logo.jpeg" alt="LBEF Logo" class="logo">
+
+                <h1 class="heading1">LBEF</h1>
+            </div>
+
+            <div class="search-bar">
+
+                <form action="/search" method="get">
+
+                    <input type="text" name="query" placeholder="Search...">
+
+                    <input type="submit" value="Search">
+
+                </form>
+
+            </div>
+
+        </div>
+        <h1 class="headerh1">Student Guide - Health and Wellness</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li>
+                    <a href="Studentwellness.html">Student Wellness</a>
+                    <ul class="dropdown">
+                        <li><a href="Physical-health.html">Physical&nbsp;Health</a></li>
+                        <li><a href="Spiritual-health.html">Spiritual Health</a></li>
+                        <li><a href="nutrition.html">Nutrition Health</a></li>
+                        <li><a href="mental-health.html">Mental Health</a></li>
+                        <li><a href="Available Care.html">Available Care</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="getinvolved.html">Get Involved</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="register.html" class="register-now" onclick="showPopup()">Register Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="register-background" role="main">
+            <div class="container">
+                <h2>Register</h2>
+                <form id="registerForm" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <input type="text" id="fullName" required>
+                        <label for="fullName">Full Name:</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email ID:</label>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" required>
+                        <label for="password">Password:</label>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" required>
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="termsAgreement" required>
+                        <label for="termsAgreement">I agree to the <a href="terms-of-service.html"
+                                style="color:white;translate: none;">Terms of Service</a></label>
+                    </div>
+                    <input type="submit" value="Register">
+                </form>
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Health and Wellness Student Organization</p>
+        <p>Contact Us: <a href="tel:+123456789">+123456789</a> | <a href="mailto:info@lbef.edu">info@lbef.edu</a></p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+    <script>
+        const form = document.getElementById('register-form');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // prevent default form submission
+            // assume registration is successful, redirect to home page
+            window.location.href = 'index.html';
+        });
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            // Password validation
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert('Password must contain at least 8 characters, including uppercase, lowercase, number, and special character.');
+                return false;
+            }
+
+            // Confirm password validation
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>
