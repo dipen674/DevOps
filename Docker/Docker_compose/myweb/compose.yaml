@@ -1,5 +1,3 @@
 services:
   myweb:
     build: .
-    ports:
-      - "5000:80"
