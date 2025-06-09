@@ -4,4 +4,4 @@ services:
 
 
 
-#Run this if you want to create your won image. If you don't want to use the swarm_compose.yaml file will automatically pull image form dockerhub repository
+#Run this if you want to create your own image. If you don't want to use the swarm_compose.yaml file will automatically pull image form dockerhub repository
