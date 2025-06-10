@@ -1,0 +1,8 @@
+services:
+  flaskapp:
+    image: image: harbor.registry.local/myproject/myflaskapp@sha256:5d043ed14bed589752912e0cb2ba31473c4cc2980b9d7c0196f8c3b0d3a00684
+    ports:
+      - "5010:5000"
+    deploy:
+      replicas: 3
+
